@@ -11,11 +11,18 @@
 
 </div>
 <script>
+var width=$(window).width();
   var mySwiper = new Swiper ('.swiper-container', {
 		autoplay: 5000,
     direction: 'horizontal',
-		effect:'cube',
+		effect:'slide',
+    autoplayDisableOnInteraction:false,
     loop: true,
+    height:240,
+    slidesPerView:width>450?3:1,
+    spaceBetween:20,
+    loopedSlides:4,
+
 
     // 如果需要分页器
     pagination: '.swiper-pagination',
