@@ -67,7 +67,7 @@
 	}
 
 	Widget.renderCcmtHP_carousel=function(widget,callback){
-		const base='http://localhost:4567/topic/';
+		const base='http://forum.supersu.com/topic/';
 		widget.data.templateData={
 			pic1:Widget.settings.get('pic1'),
 			txt1:Widget.settings.get('txt1'),
