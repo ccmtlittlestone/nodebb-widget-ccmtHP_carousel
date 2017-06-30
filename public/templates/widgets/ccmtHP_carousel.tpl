@@ -13,19 +13,16 @@
 <script>
 var width=$(window).width();
   var mySwiper = new Swiper ('.swiper-container', {
-		autoplay: 5000,
+		autoplay: width>450?0:5000,
     direction: 'horizontal',
 		effect:'slide',
     autoplayDisableOnInteraction:false,
-    loop: true,
-    height:240,
-    slidesPerView:width>450?3:1,
+    loop: width>450?false:true,
+    slidesPerView:width>450?4:1,
     spaceBetween:20,
-    loopedSlides:4,
+    paginationHide :width>450?true:false,
 
-
-    // 如果需要分页器
-    pagination: '.swiper-pagination',
+    pagination: width>450?null:'.swiper-pagination'
 
   })
 </script>
